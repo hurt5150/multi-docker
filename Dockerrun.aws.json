@@ -5,19 +5,22 @@
       "name": "client",
       "image": "kylehurt/multi-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "server",
       "image": "kylehurt/multi-server",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "worker",
       "image": "kylehurt/multi-worker",
       "hostname": "worker",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
@@ -29,7 +32,8 @@
           "containerPort": 80
         }
       ],
-      "links": ["clent", "server"]
+      "links": ["clent", "server"],
+      "memory": 128
     }
   ]
 }
